@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatButton
 import org.linphone.core.*
@@ -91,8 +92,10 @@ class MainActivity : AppCompatActivity() {
         // We use the Address object to easily set the transport protocol
         address?.transport = transportType
         accountParams.serverAddress = address
+        accountParams.isRegisterEnabled = true
         // And we ensure the account will start the registration process
         accountParams.isRegisterEnabled = true
+        accountParams.pushNotificationAllowed = true
 
         // Now that our AccountParams is configured, we can create the Account object
         val account = core.createAccount(accountParams)
@@ -117,6 +120,11 @@ class MainActivity : AppCompatActivity() {
 
         // Finally we need the Core to be started for the registration to happen (it could have been started before)
         core.start()
+
+
+        if (!core.isPushNotificationAvailable) {
+            Toast.makeText(this, "Something is wrong with the push setup!", Toast.LENGTH_LONG).show()
+        }
 
     }
 
