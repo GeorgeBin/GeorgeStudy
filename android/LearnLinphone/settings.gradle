@@ -1,3 +1,4 @@
+//
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -5,12 +6,18 @@ pluginManagement {
         mavenCentral()
     }
 }
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
+        jcenter() // legacy
+        maven { url "https://jitpack.io" }
+        maven { url 'https://repo1.maven.org/maven2/' }
+        maven { url 'https://linphone.org/maven_repository/' }// linphone
     }
 }
+
 rootProject.name = "LearnLinphone"
 include ':app'
