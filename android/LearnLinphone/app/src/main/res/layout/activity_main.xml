@@ -22,11 +22,39 @@
                 android:gravity="center"
                 android:text="version" />
 
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/registration_status"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:text="status" />
+
             <androidx.appcompat.widget.AppCompatButton
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:onClick="init"
                 android:text="Init" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/connect"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:onClick="connect"
+                android:text="connect" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/disconnect"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:onClick="disconnect"
+                android:text="disconnect" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/delete"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:onClick="delete"
+                android:text="delete" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>
