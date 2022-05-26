@@ -157,5 +157,6 @@ class MainActivity : AppCompatActivity() {
         // Same for auth info
         core.clearAllAuthInfo()
 
+
     }
 }
