@@ -28,12 +28,8 @@ public class MainActivity extends AppCompatActivity
 
 		// Example of a call to a native method
 		TextView tv = binding.sampleText;
-		tv.setText(stringFromJNI());
+		tv.setText(LearnJNI.getInstance().stringFromJNI());
 	}
 
-	/**
-	 * A native method that is implemented by the 'learnjni' native library,
-	 * which is packaged with this application.
-	 */
-	public native String stringFromJNI();
+
 }
