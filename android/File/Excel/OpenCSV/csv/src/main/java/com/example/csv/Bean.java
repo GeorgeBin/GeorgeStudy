@@ -41,6 +41,9 @@ public class Bean
 	@CsvNumber("#.###¤")// 数据类型=数字：
 	private int salary;
 
+	@CsvBindByName(column = "类型") // 需要根据值进行转换的
+	public int type;
+
 	// 高级：列表中的列表
 
 	public Bean(String name, int count, Date time, int salary)

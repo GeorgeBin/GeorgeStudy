@@ -93,8 +93,7 @@ public class MainActivity extends AppCompatActivity
 				}
 
 				Writer writer = new FileWriter(filePath);
-				StatefulBeanToCsv<Bean> beanToCsv = new StatefulBeanToCsvBuilder<Bean>(writer)
-						.build();
+				StatefulBeanToCsv<Bean> beanToCsv = new StatefulBeanToCsvBuilder<Bean>(writer).build();
 				beanToCsv.write(list);
 				writer.close();
 
